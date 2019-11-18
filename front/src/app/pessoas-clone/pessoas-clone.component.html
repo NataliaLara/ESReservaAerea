@@ -1,0 +1,22 @@
+<br/>
+<br/>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>CPF</th>
+    <th>Nome</th>
+    <th>Ação</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let pessoa of pessoas$| async;">
+    <td>{{ pessoa.cpf }}</td>
+    <td>{{ pessoa.nome }}</td>
+    <td>
+      <div>
+        <button class="btn" (click)="deletePessoa(pessoa.cpf)">Deletar</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

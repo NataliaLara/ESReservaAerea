@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-12 pad-10">
+    <button type="submit" class="btn btn-primary" (click)="goToAddCidade()">
+      <span class="glyphicon glyphicon-floppy-disk"></span> Adicionar Cidade
+    </button>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Ação</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cidade of cidades$| async;">
+    <td>{{ cidade.id }}</td>
+    <td>{{ cidade.nome }}</td>
+    <td>
+      <div>
+        <button class="btn" (click)="deleteCidade(cidade.nome)">Remover</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

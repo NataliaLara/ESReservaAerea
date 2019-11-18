@@ -1,0 +1,27 @@
+<div class="form-horizontal pad-10">
+  <br>
+  <form [formGroup]="cidadeForm">
+    <div class="col-md-6 form-group">
+      <label class=" control-label">ID</label>
+      <div class="col-md-12 no-padding">
+        <input name="id" id="id" formControlName="id" class="form-control" placeholder="" type="number" />
+      </div>
+    </div>
+    <div class="col-md-6 form-group">
+      <label class=" control-label">Nome</label>
+      <div class="col-md-12 no-padding">
+        <input name="nome" id="nome" formControlName="nome" class="form-control" placeholder="" type="text" />
+      </div>
+    </div>
+    <div class="pad-10">
+      <button mwlConfirmationPopover
+              [popoverTitle]="'Confirmação'"
+              [popoverMessage]="'Tem certeza?'"
+              placement="top"
+              (confirm)="createCidade(cidadeForm.value)"
+              type="submit" class="btn btn-save btn-primary" [disabled]="!cidadeForm.valid">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+      </button>
+    </div>
+  </form>
+</div>

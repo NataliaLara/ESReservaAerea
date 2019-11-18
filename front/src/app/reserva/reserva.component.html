@@ -1,0 +1,44 @@
+<h2>Voe conosco. Faça já a sua Reserva!</h2>
+
+<form [formGroup]="checkoutForm"
+
+(ngSubmit)="onSubmit(checkoutForm.value)">
+
+<div>
+  <label for="QtdPessoas">
+    Quantidade de Pessoas
+  </label>
+  <input id="QtdPessoas" type="text" formControlQtdPessoas="QtdPessoas">
+</div>
+
+<div>
+  <label for="CidadeO">
+    Cidade Origem
+  </label>
+  <input id="CidadeO" type="text" formControlCidadeO="CidadeO">
+</div>
+
+<div>
+  <label for="CidadeD">
+    Cidade Destino
+  </label>
+  <input id="CidadeD" type="text" formControlCidadeD="CidadeD">
+</div>
+
+<div>
+  <label for="DataIda">
+    Data Ida
+  </label>
+  <input id="DataIda" type="text" formControlDataIda="DataIda">
+</div>
+
+<div>
+  <label for="DataVolta">
+    Data Volta
+  </label>
+  <input id="DataVolta" type="text" formControlDataVolta="DataVolta">
+</div>
+
+<button class="button" type="submit">Purchase</button>
+
+</form>
