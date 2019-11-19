@@ -4,11 +4,12 @@ import {Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
 import {AppState} from "../store/index";
 import {select, Store} from "@ngrx/store";
-import { Cidade } from '../cidades/cidades.interface';
-import { CidadeService } from '../cidades/cidade.service';
+
 import {ReservaListModule} from "../store/actions/reserva.action";
 import {selectReservaListEntitiesConverted$, selectReservasLoading$} from "../store/selectors/reserva.selector";
 import {Page} from '../utils/page';
+import { Cidade } from '../cidades/cidades.interface';
+import { CidadeService } from '../cidades/cidade.service';
 
 @Component({
   selector: 'app-reservas',

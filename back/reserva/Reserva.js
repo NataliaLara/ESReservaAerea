@@ -8,8 +8,8 @@ var Reserva = {
         return db.query('SELECT * from Reserva', callback);
     },
     createreserva: function (Reserva, callback) {
-        return db.query('Insert into Reserva(idReserva,cidOri,cidDest,dataIda,dataVolta) values(?, ?)',
-         [Reserva.idReserva,cidOri,Reserva.cidDest,Reserva.dataIda,Reserva.dataVolta], callback);
+        return db.query('Insert into Reserva(idReserva,cidOri,cidDest,dataIda,dataVolta,quantPessoas) values(?, ?)',
+         [Reserva.idReserva,cidOri,Reserva.cidDest,Reserva.dataIda,Reserva.dataVolta,Reserva.quantPessoas], callback);
     },
     deletereserva: function (Reserva, callback) {
         return db.query('DELETE from Reserva WHERE idReserva = ?', [Reserva.idReserva], callback);

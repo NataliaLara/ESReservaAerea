@@ -1,0 +1,65 @@
+<h2>Voe conosco. Faça já a sua Reserva!</h2>
+
+<form [formGroup]="reservaForm"
+
+(ngSubmit)="onSubmit(reservaForm.value)">
+
+<div class="col-md-6 form-group">
+  <label for="QtdPessoas">
+    Quantidade de Pessoas
+  </label>
+  <input name="quantPessoas" id="quantPessoas" formControlName="quantPessoas" class="form-control" placeholder="" type="number" />
+</div>
+
+<div class="col-md-6 form-group">
+  <label for="CidadeO">
+    Cidade Origem
+  </label>
+  <input name="cidadeOri" id="cidadeOri" formControlName="cidadeOri" class="form-control" placeholder="" type="text" />
+</div>
+
+<div class="col-md-6 form-group">
+  <label for="CidadeD">
+    Cidade Destino
+  </label>
+  <input name="cidadeOri" id="cidadeDest" formControlName="cidadeDest" class="form-control" placeholder="" type="text" />
+</div>
+
+<div class="col-md-6 form-group">
+  <label for="DataIda">
+    Data Ida
+  </label>
+  <input name="dataIda" id="dataIda" formControlName="dataIda" class="form-control" placeholder="" type="date" />
+</div>
+
+<div class="col-md-6 form-group">
+  <label for="DataVolta">
+    Data Volta
+  </label>
+  <input name="dataVolta" id="dataVolta" formControlName="dataVolta" class="form-control" placeholder="" type="date" />
+</div>
+<!--
+<b>
+  <label for="tTipo">Cidade<span class="asterisco">*</span></label>    
+     <p-autoComplete [(ngModel)]="reserva.cidadeOri" 
+                         field="nome" [dropdown]="true"
+                         emptyMessage="Nenhuma cidade foi encontrado" 
+                         inputId="cidadeOri" name="cidadeOri"                  
+                         [suggestions]="cidades"
+                         (completeMethod)="findByNomeCidade()">
+     </p-autoComplete> 
+ </b>
+ -->
+ <div class="pad-10">
+  <button mwlConfirmationPopover
+          [popoverTitle]="'Confirmação'"
+          [popoverMessage]="'Tem certeza?'"
+          placement="top"
+          (confirm)="createReserva(reservaForm.value)"
+          type="submit" class="btn btn-save btn-primary" [disabled]="!reservaForm.valid">
+    <span class="glyphicon glyphicon-floppy-disk"></span> Salvar
+  </button>
+</div>
+<!--<button class="button" type="submit">Adicionar</button>-->
+
+</form>

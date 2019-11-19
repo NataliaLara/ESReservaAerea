@@ -36,18 +36,19 @@ import { CidadeService } from './cidades/cidade.service';
 import { CriarCidadeComponent } from './criar-cidade/criar-cidade.component';
 
 import { ReservasParentComponent } from './reservas-parent/reservas-parent.component';
-//import { CriarPessoaComponent } from './criar-pessoa/criar-pessoa.component';
+import { CriarReservaComponent } from './criar-reserva/criar-reserva.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { ReservaService } from './reservas/reserva.service';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/criar-reserva', pathMatch: 'full' },
   { path: 'matiere', component: MatieresParentComponent },
   { path: 'ajout-matiere', component: AjoutMatiereComponent },
   //{ path: '', redirectTo: '/pessoa', pathMatch: 'full' },
   { path: 'pessoa', component: PessoasParentComponent },
   { path: 'criar-pessoa', component: CriarPessoaComponent },
   {path: 'reserva', component: ReservasParentComponent },
+  {path: 'criar-reserva', component: CriarReservaComponent },
   {path: 'cidade', component: CidadesParentComponent },
   {path: 'criar-cidade', component: CriarCidadeComponent },
 ];
@@ -66,6 +67,7 @@ const appRoutes: Routes = [
     //PessoasCloneComponent,
     ReservasComponent,
     ReservasParentComponent,
+    CriarReservaComponent,
     CidadesComponent,
     CriarCidadeComponent,
     CidadesParentComponent

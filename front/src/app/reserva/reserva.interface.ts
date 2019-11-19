@@ -1,9 +1,10 @@
-//import {Cidade} from '../cidades/cidades.interface';
+import {Cidade} from '../cidades/cidades.interface';
 
 export class Reserva {
   idReserva: Number;
+  quantPessoas: Number;
   dataIda:Date;
   dataVolta: Date;
-  CidadeOri: Number;
-  CidadeDest: Number;
+  CidadeOri: Cidade;
+  CidadeDest: Cidade;
 }
